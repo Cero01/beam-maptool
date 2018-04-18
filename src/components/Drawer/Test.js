@@ -5,9 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import List, { ListItem, ListItemText } from 'material-ui/List';
-//import ListSubheader from 'material-ui/List/ListSubheader';
 import { createMuiTheme } from 'material-ui/styles';
-// import Divider from 'material-ui/Divider';
 
 const theme = createMuiTheme({
   palette: {
@@ -39,38 +37,26 @@ const styles = ({
 });
 
 
-class TemporaryDrawer extends React.Component {
-
-  state = {
-    open: false,
-  };
-
-  toggleDrawer = (toggle) => () => {
-    this.setState({
-      open: toggle,
-    });
-  };
-
-  render() {
+const Test = () => {
+  
     const { classes } = this.props;
 
     const header = (
       <div>
-      <Typography variant="headline" color="inherit" gutterBottom>
-        TRAFFIC BEAM
+        <Typography variant="headline" color="inherit" gutterBottom>
+          TRAFFIC BEAM
       </Typography>
-      <Typography variant="subheading" color="inherit" gutterBottom>
-        TESTING TOOLKIT
+        <Typography variant="subheading" color="inherit" gutterBottom>
+          TESTING TOOLKIT
       </Typography>
       </div>
     );
-
 
     const sideList = (
       <div className={classes.list}>
         <List >
           <ListItem className={classes.title} divider>
-          {header}
+            {header}
           </ListItem>
 
           <ListItem button component="a" href="#spot-management" divider>
@@ -98,13 +84,13 @@ class TemporaryDrawer extends React.Component {
         </Drawer>
       </div>
     );
-  }
+  
 }
 
-TemporaryDrawer.propTypes = {
+Test.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
 
 
-export default withStyles(styles)(TemporaryDrawer);
+export default withStyles(styles)(Test);
