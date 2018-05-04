@@ -16,7 +16,7 @@ const {
 
 const coords = [];
 
-// const coords2 = [
+// const coords = [
 //   { lat: 21.0186659, lng: 105.8177959 },
 //   { lat: 21.0186582, lng: 105.8177993 },
 //   { lat: 21.0186614, lng: 105.8178008 }
@@ -79,6 +79,7 @@ const MapWithAMarkerClusterer = compose(
     />
   </GoogleMap>
 );
+
 
 class DemoApp extends React.PureComponent {
 
